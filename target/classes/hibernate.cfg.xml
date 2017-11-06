@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+<!--COnnecting to Mysql -->
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mani</property>
+<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">adminmani</property>
+
+<!-- autocommit false -->
+<property name="hibernate.connection.autocommit">false</property>
+<!-- To show SQL Commands -->
+<property name="show_sql">true</property>
+<property name="format_sql">true</property>
+<property name="use_sql_comments">true</property>
+
+
+
+<!-- for jdbc transaction -->
+
+<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+<!-- Mappping file -->
+<mapping class="com.rwsdev.MyRWS.Employee"/>  
+
+</session-factory>
+
+</hibernate-configuration>
